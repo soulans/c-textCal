@@ -17,10 +17,10 @@ int pr(int y, int m, int t) {
 }
 
 int yam(int y, int m) {
-	char* st[] = {"Î´¶¨Òå", "  Ò»ÔÂ", "  ¶şÔÂ", "  ÈıÔÂ",
-				  "  ËÄÔÂ", "  ÎåÔÂ", "  ÁùÔÂ", "  ÆßÔÂ",
-				  "  °ËÔÂ", "  ¾ÅÔÂ", "  Ê®ÔÂ", "Ê®Ò»ÔÂ",
-				  "Ê®¶şÔÂ"};
+	char* st[] = {"æœªå®šä¹‰", "  ä¸€æœˆ", "  äºŒæœˆ", "  ä¸‰æœˆ",
+				  "  å››æœˆ", "  äº”æœˆ", "  å…­æœˆ", "  ä¸ƒæœˆ",
+				  "  å…«æœˆ", "  ä¹æœˆ", "  åæœˆ", "åä¸€æœˆ",
+				  "åäºŒæœˆ"};
 	printf("   %d                %s\n", y, st[m]);
 	printf("  ----------------------------\n");
 	return 0;
@@ -59,7 +59,7 @@ int prmonth(int y, int m){
 	int days = daysnum+md;
 	int i;
 	yam(y, m);
-	printf("   ÈÕ  Ò»  ¶ş  Èı  ËÄ  Îå  Áù");
+	printf("   æ—¥  ä¸€  äºŒ  ä¸‰  å››  äº”  å…­");
 
 	for (i = 0; i < days; ++i) {
 		 
@@ -94,6 +94,6 @@ int main(int argc, char *argv[])
 	} 
 	if (y < 100) y+=2000;
 	pr(y, m, t);
-	close(stdout);
+	fclose(stdout);
 	return 0;
 }
